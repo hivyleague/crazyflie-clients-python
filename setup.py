@@ -48,9 +48,9 @@ def get_version():
         return None
 
     version = output.strip().decode("UTF-8")
-
-    if subprocess.call(["git", "diff-index", "--quiet", "HEAD"]) != 0:
-        version += "_modified"
+    version = "0.0.42"
+    #if subprocess.call(["git", "diff-index", "--quiet", "HEAD"]) != 0:
+    #    version += "_modified"
 
     return version
 
